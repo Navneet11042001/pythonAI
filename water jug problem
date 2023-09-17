@@ -1,0 +1,38 @@
+x=0
+y=0
+m=5
+n=3
+print("rule 1: fill jug 1")
+print("rule 2: fill jug 2")
+print("rule 3: empty jug 1")
+print("rule 4: empty jug 2")
+print("rule 5: fill jug 1 from jug 2")
+print("rule 6: fill jug 2 from jug 1")
+print("rule 7: put all water of jug 1 into jug 2")
+print("rule 8: put all water of jug 2 into jug 1")
+while x!=4:
+    rule=input("enter rule: ")
+    if rule=='1':
+        x=m
+        print(x,y)
+    elif rule=='2':
+        y=n
+    elif rule=='3':
+        x=0
+    elif rule=='4':
+        y=0
+    elif rule=='5':
+        t=m-y
+        y-=t
+        x+=t
+    elif rule=='6':
+        t=n-x
+        x-+t
+        y+=t
+    elif rule=='7':
+        y+=x
+        x=0
+    elif rule=='8':
+        x+=y
+        y=0
+    print(x,y)
