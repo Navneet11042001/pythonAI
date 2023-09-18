@@ -20,41 +20,44 @@ print("Rule 9: 1 Men")
 print("Rule 10: 1 lion")
 while m2!=3 or l2!=3:
     rule=input("Enter rule: ")
-    if rule==1:
+    if rule=='1':
         m2+=2
         m1-=2
-    elif rule==2:
+    elif rule=='2':
         l2+=2
         l1-=2
-    elif rule==3:
+    elif rule=='3':
         l2+=1
         l1-=1
         m2+=1
         m2-=1
-    elif rule==4:
+    elif rule=='4':
         m2+=1
         m1-=1
-    elif rule==5:
+    elif rule=='5':
         l2+=1
         l1-=1
-    elif rule==6:
+    elif rule=='6':
         m1+=2
         m2-=2
-    elif rule==7:
+    elif rule=='7':
         l1+=2
         l2-=2
-    elif rule==8:
+    elif rule=='8':
         m1+=1
         m2-=1
         l1+=1
         l2-=1
-    elif rule==9:
+    elif rule=='9':
         m1+=1
         m2-=1
-    elif rule==10:
+    elif rule=='10':
         l1+=1
         l2-=1
-    if m1<l1 or m2<l2:
+    if m1!=0 and m1<l1:
+        print("Dead")
+        break
+    elif m2!=0 and m2<l2:
         print("Dead")
         break
     print("\nA point:")
